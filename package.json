@@ -10,7 +10,7 @@
     "dev": "nodemon index.js",
     "server": "nodemon server",
   
-    "start": "node server",
+    "start": "node index",
     
   
     "client": "npm start --prefix client"
