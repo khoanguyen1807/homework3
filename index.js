@@ -5,7 +5,6 @@ const bodyParser = require('body-parser');
 
 const cors = require('cors');
 
-const mongoose = require('mongoose');
 
 // Bây giờ, hãy tạo ứng dụng Express:
 const app = express();
@@ -13,15 +12,6 @@ const app = express();
 const PORT = process.env.PORT || 2000;
 
 app.use(cors());
-
-// connect with database
-const dbUserName = "binh";
-const dbPw = "binh";
-const dbName = "happy-shop";
-const MONGO_URI = `mongodb+srv://${dbUserName}:${dbPw}@cluster0.5zjmf.mongodb.net/${dbName}`;
-mongoose.connect(MONGO_URI, () => {
-  console.log("Connected to DB");
-});
 
 // Configuring body parser middleware
 app.use(bodyParser.urlencoded({extended: false}));
